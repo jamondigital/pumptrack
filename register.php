@@ -57,7 +57,7 @@
 	<section class="page-section page-section--register">
 		<div class="page-section__inner">
 			<p>Do you have what it takes to be the 2018 Pump Track World Champion? The Red Bull Pump Track World Championship is open to everyone and you are just one click away from entering! To register for the qualifier event we need to know a little more about you and the event that you want to enter.</p>
-			<form class="form-register">
+			<form class="form-register" action="confirmation.php" method="post">
 				<div class="error-message" style="display: none;">Please complete all marked fields!</div>
 				<fieldset>
 					<div class="form-group form-group--radio">

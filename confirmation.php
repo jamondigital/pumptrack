@@ -60,7 +60,7 @@
 			<h2 class="heading--small">Thank you for registering for the Red Bull Pump Track World Championship!</h2>
 			<p>You will receive a confirmation email from Velosolutions shortly confimring your entry. We can’t wait to see you at the Red Bull Pump Track World Championship qualifier.</p>
 			<p>Our goal is to make the Red Bull Pump Track World Championship as accessible as possible! Entrance fees will vary dependent on your country but we aim to keep costs affordable and no more than the average price of an inner tube at your local shop!</p>
-			<p><a href="">Back home</a></p>
+			<p><a href="/">Back home</a></p>
 		</div>
 	</section>		
 </main>
