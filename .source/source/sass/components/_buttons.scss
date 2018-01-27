@@ -1,0 +1,113 @@
+/**
+ * Buttons
+ * -----------------------------------------------------------------------------
+ */
+
+.btn {
+	border: none;
+	display: block;
+	line-height: 1;
+}
+
+.btn--menu {
+	height: 20px;
+	position: fixed;
+	right: 20px;
+	top: 15px;
+	width: 30px;
+	z-index: 101;
+	@include transition(all .12s ease-in);
+
+	@include bp-medium() {
+		display: none;
+	}
+	
+	span {
+		background-color: $color--white;
+		display: block;
+		height: 2px;
+		margin: 5px auto;
+		width: 30px;
+		@include transition(all .12s ease-in);
+	}
+
+	&.is-active {
+		@include transform(rotate(45deg));
+		span {
+			width: 26px;
+			&:nth-child(1) {
+				@include translateY(7px);
+			}
+			
+			&:nth-child(2) {
+				opacity: 0;
+			}
+			
+			&:nth-child(3) {
+				@include transform(translateY(-7px) rotate(90deg));
+			}
+		}
+	}
+}
+
+.btn--primary {
+	border-width: 2px;
+	border-style: solid;
+	border-color: $color--white;
+	display: block;
+	@include font-bold();
+	@include font-size($fs-btn);
+	margin-left: auto;
+	margin-right: auto;
+	padding: get($gutter, 'base');
+	text-align: center;
+	@include transition(all .1s ease-out);
+
+	@include bp-medium() {
+		border-width: 4px;
+	}	
+
+	@include bp-large() {
+		border-width: 6px;
+		padding: get($gutter, '2');
+	}
+}
+
+// Register button on homepage
+.btn--register {
+	border-color: $color--orange;
+	color: $color--orange;
+	height: 54px;
+	left: calc(50% - 130px);
+	position: absolute;
+	top: calc(50% - 54px);
+	width: 260px;
+
+	&:hover {
+		border-color: $color--white;
+		color: $color--white;
+	}
+
+	@include bp-medium() {
+		height: 68px;
+		left: calc(50% - 175px);
+		top: calc(50% - 68px);
+		width: 350px;
+	}	
+
+	@include bp-large() {
+		height: 110px;
+		left: calc(50% - 245px);
+		top: calc(50% - 110px);
+		width: 490px;
+	}	
+}
+
+.btn--submit {
+	&:hover {
+		border-color: $color--orange;
+		color: $color--orange;
+	}	
+}
+
+// Submit button on register form

@@ -1,0 +1,129 @@
+/**
+ * Variables
+ * -----------------------------------------------------------------------------
+ */
+
+
+/* Colors
+ * -------------------- */
+
+$color--red:		#97141B;
+$color--green:		#638152;
+$color--orange: 	#dd5a4e;
+$color--white: 		#ffffff;
+$color--blue:		#1D2C33;
+$color--grey:		#556a70;
+$color--success:    #1FC281 !default;
+$color--danger:     #F24444 !default;
+
+
+/* Gutter
+ * -------------------- */
+
+$gutter: (
+  "half":   5px,
+  "base":  10px,
+  "2":     20px,
+  "3":     30px,
+  "4": 	   40px,
+  "5": 	   50px,
+  "6": 	   60px,
+  "7": 	   70px,
+  "8": 	   80px,
+  "9": 	   90px,
+  "10":	  100px,            
+);
+
+
+/* Urls
+ * -------------------- */
+ 
+$url-images: 	'../img/';
+$url-icons:  	'../img/icons/';
+
+
+/* Font sizes
+ * -------------------- */
+
+$breakpoints: (
+	medium: 960px,
+	large:  1400px
+);
+
+// General
+$fs-default: (
+	null:	(18px,1.5),
+	medium: (18px,1.5),
+	large:  (20px,1.6)
+);
+
+$fs-small: (
+	null:	(16px,1),
+	medium: (16px,1),
+	large:  (16px,1)
+);
+
+$fs-medium: (
+	null:	(18px,1.5),
+	medium: (22px,1.3636),
+	large:  (26px,1.4230)
+);
+
+// Navigation
+$fs-nav: (
+	null:	(24px,1),
+	medium: (20px,1),
+	large:  (20px,1)
+);
+
+// Headings
+$fs-heading-large: (
+	null:	(37px,0.9),
+	medium: (110px,0.9),
+	large:  (130px,0.86)
+);
+
+$fs-heading-medium: (
+	null:	(40px,1.55),
+	medium: (110px,1.118),
+	large:  (127px,1.118)
+);
+
+$fs-heading-default: (
+	null:	(28px,1),
+	medium: (72px,1),
+	large:  (115px,1)
+);
+
+$fs-heading-small: (
+	null:	(24px,1.208),
+	medium: (60px,1.166),
+	large:  (72px,1.111)
+);
+
+$fs-heading-byline: (
+	null:	(18px,1),
+	medium: (20px,1),
+	large:  (20px,1)
+);
+
+// Footer
+$fs-footer: (
+	null:	(18px,1.5),
+	medium: (18px,1.5),
+	large:  (18px,1.5)
+);
+
+// Form
+$fs-btn: (
+	null:	(29px,1),
+	medium: (40px,1),
+	large:  (58px,1)
+);
+
+$fs-form-item: (
+	null:	(29px,1),
+	medium: (40px,1),
+	large:  (48px,1)
+);
+

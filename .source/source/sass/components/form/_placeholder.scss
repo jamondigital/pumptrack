@@ -1,0 +1,42 @@
+/**
+ * Form Placeholder
+ * -----------------------------------------------------------------------------
+ */
+
+::-webkit-input-placeholder {
+	color: $color--grey;
+	@include font-bold();
+}
+
+::-moz-placeholder {
+	color: $color--grey;
+	@include font-bold();
+}
+
+:-ms-input-placeholder {
+	color: $color--grey;
+	@include font-bold();
+}
+
+:-moz-placeholder {
+	color: $color--grey;
+	@include font-bold();
+}
+
+.has-error {
+	&::-webkit-input-placeholder {
+		color: $color--orange;
+	}
+	
+	&::-moz-placeholder {
+		color: $color--orange;
+	}
+	
+	&:-ms-input-placeholder {
+		color: $color--orange;
+	}
+	
+	&:-moz-placeholder {
+		color: $color--orange;
+	}	
+}

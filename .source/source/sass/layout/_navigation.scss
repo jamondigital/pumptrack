@@ -1,0 +1,101 @@
+/**
+ * Navigation
+ * -----------------------------------------------------------------------------
+ */
+
+nav {
+	display: block;
+}
+
+nav.page-nav {
+	background-color: $color--red;
+	display: block;
+	height: 100%;
+	left: 0;
+	opacity: 0;
+	pointer-events: none;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 100;
+	@include transition(opacity 0 ease-in-out);
+
+	&.is-visible {
+		opacity: 1;
+		pointer-events: auto;
+		@include transition(opacity .24s ease-in-out);
+	}
+	
+	ul {
+		margin-top: 70px;
+	}
+
+	li {
+		display: block;
+		text-align: center;
+	}
+	
+	a {
+		color: $color--white;
+		display: inline-block;
+		@include font-bold();
+		@include font-size($fs-nav);
+		line-height: 1;
+		padding: 15px 0;
+		position: relative;
+		
+		&:after {
+			background-color: $color--white;
+			bottom: 8px;
+			content: '';
+			display: inline-block;
+			height: 3px;
+			line-height: 1;
+			position: absolute;
+			left: 0;
+			width: 0;
+			@include transition(width .12s ease-in-out);
+		}
+		
+		&.is-active:after,
+		&:hover:after {
+			width: 100%;
+		}
+	}
+
+	@include bp-medium() {
+		background-color: transparent;
+		display: inline-block;
+		height: auto;
+		left: auto;
+		opacity: 1;
+		pointer-events: auto;
+		right: 30px;
+		top: 30px;
+		width: auto;
+		
+		ul {
+			margin-top: 0;
+		}
+		
+		li {
+			display: inline-block;
+			&:not(:last-of-type) {
+				margin-right: get($gutter, '3');
+			}
+		}
+		
+		a {
+			padding: 0;
+			&:after {
+				display: none;
+			}
+		}		
+	}
+	
+	@include bp-large() {
+		right: 65px;
+		top: 45px;
+	}
+	
+}

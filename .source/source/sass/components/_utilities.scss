@@ -1,0 +1,19 @@
+/**
+ * Utilities
+ * -----------------------------------------------------------------------------
+ */
+ 
+em, 
+address,
+i {
+	font-style: normal;
+}
+
+b,
+strong {
+	@include font-bold();
+}
+
+p {
+	margin: 0 0 get($gutter, '3') 0;
+}

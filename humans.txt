@@ -1,0 +1,14 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+    Marcel Stadelmann, Jam'on digital AG, marcel@jamon.digital
+	Karsten Zingg, Jam'on digital AG, karsten@jamon.digital
+	Sarah Hähnle, Jam'on digital AG, sarah@jamon.digital
+	Pau Todo, Jam'on digital AG, pau@jamon.digital
+	
+# THANKS
+
+# TECHNOLOGY COLOPHON
+    HTML5, CSS3
+    jQuery, Modernizr

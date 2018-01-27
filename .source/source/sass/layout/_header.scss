@@ -1,0 +1,29 @@
+/**
+ * Header
+ * -----------------------------------------------------------------------------
+ */
+
+header.page-header {
+	@extend %box-spacing;
+	
+	&.page-header--register {
+		@include background-default();
+		background-image: url($url-images + 'rbptwc-background-register-small.jpg');
+		background-position: center center;
+		background-size: cover;
+		border-top: 5px solid $color--red;
+		min-height: 300px;
+		padding-top: get($gutter, 'base');
+		
+		@include bp-medium() {
+			background-image: url($url-images + 'rbptwc-background-register-large.jpg');
+			border-top: 10px solid $color--red;
+			min-height: 560px;
+			padding-top: get($gutter, '4');
+		}
+		
+		@include bp-large() {
+			padding-top: get($gutter, '4') + get($gutter, 'half');
+		}	
+	}
+}

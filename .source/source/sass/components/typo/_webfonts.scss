@@ -1,0 +1,25 @@
+/**
+ * Typography - Webfonts
+ * -----------------------------------------------------------------------------
+ */
+
+// Cut the crap
+@font-face {
+	font-family: 'Cutthecrap';
+	src: url('fonts/Cutthecrap.eot');
+	src: url('fonts/Cutthecrap.woff') format('woff'), url('fonts/Cutthecrap.svg#Cutthecrap') format('svg');
+}
+
+// Galano Classic Medium
+@font-face {
+	font-family: 'GalanoClassicMedium';
+	src: url('fonts/GalanoClassic-Medium.eot');
+	src: url('fonts/GalanoClassic-Medium.woff') format('woff'), url('fonts/GalanoClassic-Medium.svg#GalanoClassic-Medium') format('svg');
+}
+
+// Galano Classic Bold
+@font-face {
+	font-family: 'GalanoClassicBold';
+	src: url('fonts/GalanoClassic-Bold.eot');
+	src: url('fonts/GalanoClassic-Bold.woff') format('woff'), url('fonts/GalanoClassic-Bold.svg#GalanoClassic-Bold') format('svg');
+}

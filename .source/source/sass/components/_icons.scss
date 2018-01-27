@@ -1,0 +1,37 @@
+/**
+ * Icons
+ * -----------------------------------------------------------------------------
+ */
+
+.icon {
+	display: block;
+}
+
+.icon--social {
+	@include background-default();
+	background-size: 100%;
+	background-position: top left;
+	display: inline-block;
+	height: 40px;
+	margin-right: 12px;
+	text-decoration: none;
+	width: 40px;
+	@include transition(transform .16s ease-out);
+	
+	&:hover {
+		@include rotate(30deg);
+	}
+}
+
+.icon--facebook {
+	background-image: url($url-icons + 'icon-facebook.svg');
+}
+
+.icon--instagram {
+	background-image: url($url-icons + 'icon-instagram.svg');
+}
+
+.icon--twitter {
+	background-image: url($url-icons + 'icon-twitter.svg');
+	margin-right: 0;
+}

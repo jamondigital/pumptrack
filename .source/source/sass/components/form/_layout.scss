@@ -1,0 +1,92 @@
+/**
+ * Form layout elements
+ * -----------------------------------------------------------------------------
+ */
+
+fieldset {
+	&:not(:last-of-type) {
+		margin-bottom: get($gutter, '6');
+	}
+
+	@include bp-medium() {
+		&:not(:last-of-type) {
+			margin-bottom: get($gutter, '8');
+		}		
+	}
+}
+
+.form-group {
+	position: relative;
+	
+	&:not(:last-of-type) {
+		margin-bottom: get($gutter, '4');
+	}
+	
+	@include bp-medium() {
+		&:not(:last-of-type) {
+			margin-bottom: get($gutter, '5');
+		}		
+	}
+
+	@include bp-large() {
+		&:not(:last-of-type) {
+			margin-bottom: get($gutter, '6');
+		}		
+	}
+	
+	&.form-group--radio {
+		&:not(:last-of-type) {
+			margin-bottom: get($gutter, '3');
+		}
+		
+		@include bp-medium() {
+			&:not(:last-of-type) {
+				margin-bottom: get($gutter, '4');
+			}		
+		}
+
+		@include bp-large() {
+			&:not(:last-of-type) {
+				margin-bottom: get($gutter, '4');
+			}		
+		}
+	}	
+
+	&.form-group--checkbox {
+		&:not(:last-of-type) {
+			margin-bottom: get($gutter, '2');
+		}
+		
+		@include bp-medium() {
+			&:not(:last-of-type) {
+				margin-bottom: get($gutter, '3');
+			}		
+		}
+
+		@include bp-large() {
+			&:not(:last-of-type) {
+				margin-bottom: get($gutter, '3');
+			}		
+		}
+	}	
+
+}
+
+.form-group__item-inline {
+	display: inline-block;
+	position: relative;
+	margin-right: get($gutter, '3');
+}
+
+.form-group__item {
+	margin-bottom: get($gutter, '4');
+	@include bp-medium() {
+		margin-bottom: 0;
+	}
+}
+
+.grid .form-group {
+	@include bp-medium() {
+		margin-bottom: 0;
+	}
+}

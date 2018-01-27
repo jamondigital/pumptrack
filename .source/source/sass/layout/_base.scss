@@ -1,0 +1,24 @@
+/**
+ * Base
+ * -----------------------------------------------------------------------------
+ */
+
+html,
+body {
+	min-height: 100%;
+}
+
+body {
+	color: $color--white;
+	@include font-regular();
+	@include font-size($fs-default);
+	@include font-smoothing();
+}
+
+
+/**
+ *  Scrollbars
+ * -----------------------------------------------------------------------------
+ */
+ 
+@include scrollbar(8px, #dddddd);

@@ -1,0 +1,31 @@
+/**
+ * Forms
+ * -----------------------------------------------------------------------------
+ */
+   
+form {
+	display: block;
+	
+	&.form-register {
+		margin-top: get($gutter, '4');
+		
+		@include bp-medium() {
+			margin-top: get($gutter, '6');
+		}
+	}
+}
+
+
+.form-disclaimer {
+	color: #8B9CA4;
+	margin-bottom: get($gutter, '5');
+	margin-top: get($gutter, '5');
+	text-align: center;
+	
+	@include bp-medium() {
+		max-width: 80%;
+		margin-bottom: get($gutter, '7');
+		margin-left: auto;
+		margin-right: auto;
+	}
+}

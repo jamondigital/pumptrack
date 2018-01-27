@@ -1,0 +1,62 @@
+/**
+ * Headings
+ * -----------------------------------------------------------------------------
+ */
+
+h1, h2, h3 {
+	
+}
+
+h1 {
+	color: $color--white;
+	@include font-cutthecrap();
+	@include font-size($fs-heading-large);
+	
+	&.heading--small {
+		@include font-size($fs-heading-default);
+	}
+}
+
+h2 {
+	
+	&.heading--small {
+		@include font-bold();
+		@include font-size($fs-heading-small);
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: get($gutter, '3');
+		
+		@include bp-medium() {
+			margin-bottom: get($gutter, '5');
+		}
+	}
+
+	&.heading--medium {
+		@include font-bold();
+		@include font-size($fs-heading-medium);
+		margin-bottom: get($gutter, 'base') + get($gutter, 'half');
+		
+		@include bp-medium() {
+			@include font-cutthecrap();
+			letter-spacing: .06em;
+			margin-bottom: get($gutter, '2') + get($gutter, 'half');
+		}
+		
+		@include bp-large() {
+			margin-bottom: get($gutter, '6');
+		}
+	}
+	
+	&.heading--centered {
+		max-width: 80%;
+		text-align: center;
+
+		@include bp-medium() {
+			max-width: 60%;
+		}
+	}
+}
+
+h3 {
+	
+}

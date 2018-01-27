@@ -1,0 +1,51 @@
+/**
+ * Brand (client logo)
+ * -----------------------------------------------------------------------------
+ */
+
+.brand {
+	display: block;
+}
+
+.brand--rbptwc {
+	height: auto;
+	margin-top: get($gutter, '2');
+	position: relative;
+	width: 140px;
+	@include transition(transform .1s ease-out);
+	
+	@include bp-medium() {
+		width: 280px;
+		margin-top: get($gutter, '4');
+	}
+	
+	@include bp-large() {
+		width: 460px;
+		margin-top: get($gutter, '4') + get($gutter, 'half');
+	}
+	
+	&.brand--rbptwc-small {
+		margin: 0 !important;
+		max-width: 336px;
+	}	
+}
+
+.brand--velosolutions {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 400px;
+	text-decoration: none;
+	width: 90%;
+	
+	@include bp-medium() {
+		max-width: none;
+		margin-left: 0;
+		width: 100%;
+	}
+	
+	img {
+		display: block;
+		height: auto;
+		width: 100%;
+	}
+}

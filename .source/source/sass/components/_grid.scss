@@ -1,0 +1,55 @@
+/**
+ * Grid
+ * -----------------------------------------------------------------------------
+ */
+
+$susy: (
+	columns: 4,
+	gutters: 0.4,
+	global-box-sizing: border-box,
+	debug: (image: hide)
+); 
+
+
+/**
+ * Default Grid
+ * -----------------------------------------------------------------------------
+ */
+
+.grid {
+	@extend %clearfix;
+	@include container;
+	
+	.span {
+		width: 100%;
+	}
+
+	// create grid with 4 columns
+	@include bp-medium() {
+
+		// span--1 to span--4
+		@for $i from 1 through 4 {
+		    .span--#{$i} {
+		        @include span($i);
+		    }
+		}
+		
+		.span--last {
+			@include last();
+		}
+		
+		// pull--1 to pull--4
+		@for $i from 1 through 4 {
+		    .pull--#{$i} {
+		        @include pull($i);
+		    }
+		}		
+
+		// push--1 to push--8
+		@for $i from 1 through 4 {
+		    .push--#{$i} {
+		        @include push($i);
+		    }
+		}
+	}
+}

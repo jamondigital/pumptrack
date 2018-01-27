@@ -1,0 +1,247 @@
+/**
+ *  Sections - default
+ * -----------------------------------------------------------------------------
+ */
+
+section.page-section {
+	@include background-default();
+	background-size: cover;
+	background-color: transparent;
+	background-position: center center;
+	position: relative;
+	
+	a:not(.btn) {
+		color: $color--white;
+		text-decoration: underline;
+		&:hover {
+			text-decoration: none;
+		}
+	}
+}
+
+
+/**
+ *  Section - INTRO
+ * -----------------------------------------------------------------------------
+ */
+
+section.page-section--intro {
+	@extend %box-spacing;
+	background-image: url($url-images + 'rbptwc-background-intro.jpg');
+	border-top: 5px solid $color--red;
+	min-height: 100vh;
+
+	@include bp-medium() {
+		border-top: 10px solid $color--red;
+	}
+	
+	.header-intro {
+		margin-top: 70px;
+		
+		@include bp-medium() {
+			margin-top: 45px;
+		}
+
+		@include bp-large() {
+			margin-top: 55px;
+		}
+	}
+	
+	.heading-byline {
+		display: block;
+		@include font-bold();
+		@include font-size($fs-heading-byline);
+		margin-bottom: 5px;
+		
+		@include bp-medium() {
+			margin-bottom: 20px;
+		}
+
+		@include bp-large() {
+			margin-bottom: 15px;
+		}
+	}
+}
+
+
+/**
+ *  Section - CALL TO ACTION
+ * -----------------------------------------------------------------------------
+ */
+
+section.page-section--cta {
+	.visual {
+		display: block;
+		height: auto;
+		width: 100%;
+		
+		img {
+			display: block;
+			height: auto;
+			width: 100%;
+		}
+	}
+}
+
+
+/**
+ *  Section - EVENT DESCRIPTION
+ * -----------------------------------------------------------------------------
+ */
+ 
+section.page-section--description {
+	@extend %box-spacing;
+	background-color: $color--green;
+	padding-bottom: get($gutter, '3');
+	
+	p {
+		@include font-size($fs-medium);
+	}
+	
+	@include bp-medium() {
+		padding-bottom: get($gutter, '5');
+	}
+	
+	@include bp-large() {
+		padding-bottom: get($gutter, '10');
+	}
+}
+
+
+/**
+ *  Section - CALENDAR
+ * -----------------------------------------------------------------------------
+ */
+ 
+section.page-section--calendar {
+	@extend %box-spacing;
+	background-image: url($url-images + 'rbptwc-background-calendar-small.jpg');
+	background-size: cover;
+	background-position: center center;
+	padding-bottom: get($gutter, '3');
+	padding-top: get($gutter, '3');
+	
+	@include bp-medium() {
+		background-image: url($url-images + 'rbptwc-background-calendar-large.jpg');
+		padding-bottom: get($gutter, '5');
+		padding-top: get($gutter, '5');
+	}
+	
+	@include bp-large() {
+		padding-bottom: get($gutter, '10');
+		padding-top: get($gutter, '10');
+	}
+	
+	.calendar {
+		@include bp-medium() {
+			-webkit-columns: auto 2;
+			   -moz-columns: auto 2;
+			        columns: auto 2;
+			-webkit-column-gap: 30px;
+			   -moz-column-gap: 30px;
+			        column-gap: 30px;			        			
+		}
+
+		@include bp-large() {
+			-webkit-columns: auto 3;
+			   -moz-columns: auto 3;
+			        columns: auto 3;
+			-webkit-column-gap: 60px;
+			   -moz-column-gap: 60px;
+			        column-gap: 60px;			        			
+		}
+
+	}
+	
+	.calendar-item {
+		@extend %clearfix;
+		border-bottom: 1px solid $color--white;
+		margin-bottom: get($gutter, 'base');
+		padding-bottom: get($gutter, 'base');
+		overflow: hidden;
+		break-inside: avoid-column;
+		-webkit-column-break-inside: avoid;
+		
+	}
+	
+	.calendar-item__month {
+		@include font-bold();
+		@include bp-large() {
+			float: left;
+			width: 35%;
+		}
+	}
+	
+	.calendar-item__desc {
+		@include bp-large() {
+			float: left;
+			width: 65%;
+		}
+	}		
+}
+
+
+/**
+ *  Section - Register
+ * -----------------------------------------------------------------------------
+ */
+ 
+section.page-section--register {
+	@extend %box-spacing;
+	background-color: $color--blue;
+	padding-bottom: get($gutter, '4');
+	padding-top: 0;
+	
+	@include bp-medium() {
+		padding-bottom: get($gutter, '5');
+	}
+	
+	@include bp-large() {
+		padding-bottom: get($gutter, '8');
+	}
+		
+	.page-section__inner {
+		margin-left: auto;
+		margin-right: auto;
+		max-width: 900px;	
+	}
+
+	.heading-byline {
+		display: block;
+		margin-bottom: 5px;
+		
+		@include bp-medium() {
+			margin-bottom: 20px;
+		}
+
+		@include bp-large() {
+			margin-bottom: 15px;
+		}
+	}
+	
+	p {
+		@include bp-large() {
+			margin-bottom: get($gutter, '4');
+		}
+	}
+}
+
+
+/**
+ *  Content elements
+ * -----------------------------------------------------------------------------
+ */
+ 
+article.text-media {
+	margin-bottom: get($gutter, '3');
+	
+	@include bp-medium() {
+		margin-bottom: 0;
+	}
+		
+	p {
+		&:last-of-type {
+			margin-bottom: 0;
+		}
+	}
+}

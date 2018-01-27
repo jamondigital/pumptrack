@@ -1,0 +1,8 @@
+/**
+ * Typography - Helpers classes
+ * -----------------------------------------------------------------------------
+ */
+
+.fs-default {
+	@include font-size($fs-default);
+}

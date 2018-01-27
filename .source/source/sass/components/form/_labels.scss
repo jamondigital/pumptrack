@@ -1,0 +1,51 @@
+/**
+ * Form labels
+ * -----------------------------------------------------------------------------
+ */
+ 
+label {
+	@include font-bold();
+	display: block;
+	
+	&.control-label {
+		&:hover {
+			cursor: pointer;
+		}
+	}
+	
+	&.dropdown-label,
+	&.placeholder,
+	&.is-floating {
+		color: $color--grey;
+	}
+		
+	&.placeholder {
+		@include font-size($fs-form-item);
+		line-height: 1;
+		position: absolute;
+		@include translate(0,10px);
+		@include transition(transform .16s ease-out);
+		z-index: 1;
+	}
+	
+	&.is-floating {
+		@include font-size($fs-default);
+		@include translate(0,-22px);
+		
+		@include bp-medium() {
+			@include translate(0,-26px);
+		}
+
+		@include bp-large() {
+			@include translate(0,-30px);
+		}
+	}
+	
+	a {
+		color: $color--white;
+		text-decoration: underline;
+		&:hover {
+			text-decoration: none;
+		}
+	}
+}

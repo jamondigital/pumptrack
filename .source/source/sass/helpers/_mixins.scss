@@ -1,0 +1,215 @@
+/**
+ * Mixins
+ * -----------------------------------------------------------------------------
+ */
+
+@mixin scrollbar($width: 6px, $color: #000000) {
+	::-webkit-scrollbar {
+		height: $width;
+	    width: $width;
+	}
+	::-webkit-scrollbar-track {
+		background-color: $color--white;
+	    -webkit-border-radius: 0;
+	    border-radius: 0;
+	}
+	::-webkit-scrollbar-thumb {
+		background-color: $color;
+	}
+	::-webkit-scrollbar-thumb:window-inactive {
+		background-color: $color;
+	}	
+}
+
+/**
+ * Vertical align
+ * -----------------------------------------------------------------------------
+ * 
+ * Usage:
+ *
+ *      element {
+ *          @include vertical-align($position);
+ *      }
+ *
+ */
+ 
+@mixin vertical-align($position: relative) {
+	position: $position;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+
+/**
+ * Cross browser opacity
+ * -----------------------------------------------------------------------------
+ * 
+ * Usage:
+ *
+ *      img {
+ *          @include opacity(1,100);
+ *      }
+ *
+ */
+ 
+@mixin opacity($x: 0.5, $y: 60) {
+	opacity: $x;
+    filter: alpha(opacity=$y);
+}
+
+
+/**
+ * Set box shadow
+ * -----------------------------------------------------------------------------
+ * 
+ * Usage:
+ *
+ *      div {
+ *          @include box-shadow(values);
+ *      }
+ *
+ */
+ 
+@mixin box-shadow($x: 5px, $y: 5px, $blur: 5px, $spread: 0px, $color: #000) {
+	-webkit-box-shadow: $x $y $blur $spread $color;
+	-moz-box-shadow: $x $y $blur $spread $color;
+	-ms-box-shadow: $x $y $blur $spread $color;
+	-o-box-shadow: $x $y $blur $spread $color;
+	box-shadow: $x $y $blur $spread $color;
+}
+
+
+/**
+ * Grayscale an image
+ * -----------------------------------------------------------------------------
+ * 
+ * Usage:
+ *
+ *      img {
+ *          @include filter-grayscale(value);
+ *      }
+ *
+ */
+ 
+@mixin filter-grayscale($val: 100%) {
+	filter: grayscale($val);
+	-webkit-filter: grayscale($val);
+	-moz-filter: grayscale($val);
+	-o-filter: grayscale($val);
+	-ms-filter: grayscale($val);	
+}
+
+
+/**
+ * Background defaults
+ * -----------------------------------------------------------------------------
+ * 
+ * Usage:
+ *
+ *      header {
+ *          @include background-default($opts)
+ *      }
+ *
+ */
+ 
+@mixin background-default($repeat: no-repeat, $size: 100%, $position: top left) {
+	background-repeat: $repeat;
+	background-size: $size;
+	background-position: $position;
+}
+
+
+/**
+ * Visually hide an element
+ * -----------------------------------------------------------------------------
+ * This placeholder selector will visually hide an element while
+ * still make it accessible for screenreaders.
+ * 
+ * Usage:
+ *
+ *      p {
+ *          @extend %visually-hidden;
+ *      }
+ *
+ */
+
+%visually-hidden,
+.visually-hidden {
+    position: absolute !important;
+    overflow: hidden;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    border: 0;
+    clip: rect(1px, 1px, 1px, 1px);
+}
+
+
+/**
+ * Clearfix
+ * -----------------------------------------------------------------------------
+ * A solid clearfix by Nicolas Gallagher.
+ * Source: (http://nicolasgallagher.com/micro-clearfix-hack/)
+ * 
+ * Usage:
+ *
+ *      p {
+ *          @extend %clearfix;
+ *      }
+ *
+ */
+ 
+%clearfix,
+.clearfix {
+    *zoom: 1;
+
+    &:before {
+        content: ' ';
+        display: table;
+    }
+
+    &:after {
+        content: ' ';
+        display: table;
+        clear: both;
+    }
+}
+
+
+/**
+ * Media Queries
+ * -----------------------------------------------------------------------------
+ * A simple mixin for using media queries. Change the values to
+ * fit your sites needs.
+ * 
+ * Usage:
+ *
+ *      header {
+ *          @include bp-small() {
+ *              display: none;
+ *          }
+ *          @include bp-huge() {
+ *              display: block;
+ *          }
+ *      }
+ */
+
+@mixin bp-medium {
+    @media only screen and (min-width: 960px) {
+        @content;
+    }
+}
+
+@mixin bp-large {
+    @media only screen and (min-width: 1400px) {
+        @content;
+    }
+}
+
+@mixin display-retina {
+	@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { 
+		@content;
+	}  
+}
