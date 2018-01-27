@@ -2,22 +2,25 @@
  * Form errors
  * -----------------------------------------------------------------------------
  */
-
-input[type=text],
-input[type=email],
-input[type=number],
-input[type=password],
-input[type=date],
-textarea {
-	&.has-error {
+.has-error {
+	input[type=text],
+	input[type=email],
+	input[type=number],
+	input[type=password],
+	input[type=date],
+	
+	textarea {
 		border-bottom-color: $color--orange;
+		color: $color--orange;
+	}
+	
+	label {
 		color: $color--orange;
 	}	
 }
 
 
-
 .error-message {
 	color: $color--orange;
-	margin-bottom: get($gutter, 'base');
+	margin-bottom: get($gutter, '2');
 }

@@ -57,8 +57,8 @@
 	<section class="page-section page-section--register">
 		<div class="page-section__inner">
 			<p>Do you have what it takes to be the 2018 Pump Track World Champion? The Red Bull Pump Track World Championship is open to everyone and you are just one click away from entering! To register for the qualifier event we need to know a little more about you and the event that you want to enter.</p>
-			<form class="form-register" action="confirmation.php" method="post">
-				<div class="error-message" style="display: none;">Please complete all marked fields!</div>
+			<form class="form-register js-validate" action="confirmation.php" method="post">
+				<div class="error-message js-validation-error" style="display: none;">Please complete all marked fields!</div>
 				<fieldset>
 					<div class="form-group form-group--radio">
 						<div class="form-group__item-inline">
@@ -77,38 +77,38 @@
 						</div>
 					</div>
 					<div class="grid form-group">
-						<div class="span span--2 form-group__item">
+						<div class="span span--2 form-group__item js-error">
 							<label class="placeholder">Firstname</label>
-							<input type="text" name="firstname" class="js-floating">
+							<input type="text" name="firstname" class="js-floating" data-rules="required">
 						</div>
-						<div class="span span--2 span--last form-group__item">
+						<div class="span span--2 span--last form-group__item js-error">
 							<label class="placeholder">Lastname</label>
-							<input type="text" name="lastname" class="js-floating">
+							<input type="text" name="lastname" class="js-floating" data-rules="required">
 						</div>
 					</div>
-					<div class="form-group">
+					<div class="form-group js-error">
 						<label class="placeholder">Date of birth</label>
-						<input type="text" name="date-of-birth" class="js-floating">
+						<input type="text" name="date-of-birth" class="js-floating" data-rules="required">
 					</div>
-					<div class="form-group">
+					<div class="form-group js-error">
 						<label class="placeholder">Address</label>
-						<input type="text" name="address" class="js-floating">
+						<input type="text" name="address" class="js-floating" data-rules="required">
 					</div>
-					<div class="grid form-group">
+					<div class="grid form-group js-error">
 						<div class="span span--2 form-group">
 							<label class="placeholder">ZIP code</label>
-							<input type="text" name="zip" class="js-floating">
+							<input type="text" name="zip" class="js-floating" data-rules="required">
 						</div>
-						<div class="span span--2 span--last form-group">
+						<div class="span span--2 span--last form-group js-error">
 							<label class="placeholder">City</label>
-							<input type="text" name="city" class="js-floating">
+							<input type="text" name="city" class="js-floating" data-rules="required">
 						</div>
 					</div>					
-					<div class="form-group">
+					<div class="form-group js-error">
 						<label class="dropdown-label">Country</label>
 						<div class="dropdown">
-							<select name="country" class="js-floating">
-								<option>Please choose...</option>
+							<select name="country" class="js-floating" data-rules="required">
+								<option value="">Please choose...</option>
 								<option value="Afghanistan">Afghanistan</option>
 								<option value="Albania">Albania</option>
 								<option value="Algeria">Algeria</option>
@@ -351,20 +351,20 @@
 							</select>
 						</div>
 					</div>
-					<div class="form-group">
+					<div class="form-group js-error">
 						<label class="placeholder">Email</label>
-						<input type="email" name="email" class="js-floating">
+						<input type="text" name="email" class="js-floating" data-rules="required|valid_email">
 					</div>					
-					<div class="form-group">
+					<div class="form-group js-error">
 						<label class="placeholder">Phone</label>
-						<input type="text" name="phone" class="js-floating">
+						<input type="text" name="phone" class="js-floating" data-rules="required">
 					</div>
 				</fieldset>
 				<fieldset>
-					<div class="form-group">
+					<div class="form-group js-error">
 						<label>Which race you are entering?</label>
 						<div class="dropdown">
-							<select name="country">
+							<select name="country" data-rules="required">
 								<option value="Afghanistan">Afghanistan</option>
 								<option value="Albania">Albania</option>
 								<option value="Algeria">Algeria</option>
@@ -375,15 +375,15 @@
 					</div>						
 				</fieldset>
 				<fieldset>
-					<div class="form-group form-group--checkbox">
-						<input type="checkbox" name="tos" value="1" id="cb_tos">
+					<div class="form-group form-group--checkbox js-error">
+						<input type="checkbox" name="tos" value="1" id="cb_tos" data-rules="is_checked">
 						<div class="checkbox"></div>
 						<label for="cb_tos" class="control-label">
 							<span>I accept the terms and conditions of the <a href="">privacy policy</a>.</span>
 						</label>
 					</div>
-					<div class="form-group">
-						<input type="checkbox" name="age_limit" value="1" id="cb_age_limit">
+					<div class="form-group js-error">
+						<input type="checkbox" name="age_limit" value="1" id="cb_age_limit" data-rules="is_checked">
 						<div class="checkbox"></div>
 						<label for="cb_age_limit" class="control-label">
 							<span>I confirm having the ago of 16. Some countries have different age limits, like Country 1 (18), Country 2 (19), Country 3 (17) etc.</span>
