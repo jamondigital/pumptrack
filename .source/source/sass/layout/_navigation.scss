@@ -57,8 +57,7 @@ nav.page-nav {
 			@include transition(width .12s ease-in-out);
 		}
 		
-		&.is-active:after,
-		&:hover:after {
+		&.is-active:after {
 			width: 100%;
 		}
 	}

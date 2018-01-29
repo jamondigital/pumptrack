@@ -56,6 +56,7 @@
 			<span class="heading-byline">March&ndash;September 2018</span>
 			<h1>Red Bull<br>Pumptrack<br>World<br>Championship</h1>
 		</header>
+		<a href="javascript:;" class="icon icon--next-page" data-scrollto=".page-section--cta"></a>
 	</section>
 	<section class="page-section page-section--cta">
 		<figure class="visual">

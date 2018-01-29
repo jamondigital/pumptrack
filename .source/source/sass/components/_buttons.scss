@@ -104,6 +104,17 @@
 }
 
 .btn--submit {
+	
+	width: 156px;
+	
+	@include bp-medium() {
+		width: 230px;
+	}
+
+	@include bp-large() {
+		width: 310px;
+	}
+	
 	&:hover {
 		border-color: $color--orange;
 		color: $color--orange;

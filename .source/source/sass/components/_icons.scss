@@ -23,6 +23,30 @@
 	}
 }
 
+.icon--next-page {
+	@include background-default();
+    background-color: transparent;
+    background-image: url($url-icons + 'icon-chevron.svg');
+    background-size: 100%;
+	bottom: 30px;
+	height: 16px;
+	left: calc(50% - 8px);
+	position: absolute;
+	width: 25px;
+	@include translate(0,0);
+	@include transition(transform .16s ease-in-out);
+	
+	&:hover {
+		@include translate(0,3px);
+	}
+	
+	@include bp-medium() {
+		height: 28px;
+		left: calc(50% - 21px);
+		width: 43px;
+	}
+}
+
 .icon--facebook {
 	background-image: url($url-icons + 'icon-facebook.svg');
 }

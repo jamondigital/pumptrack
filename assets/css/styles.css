@@ -956,8 +956,6 @@ p {
 
 /* line 33, ../../.source/source/sass/components/_brand.scss */
 .brand--velosolutions {
-  margin-left: auto;
-  margin-right: auto;
   max-width: 400px;
   text-decoration: none;
   width: 90%;
@@ -970,7 +968,7 @@ p {
     width: 100%;
   }
 }
-/* line 46, ../../.source/source/sass/components/_brand.scss */
+/* line 44, ../../.source/source/sass/components/_brand.scss */
 .brand--velosolutions img {
   display: block;
   height: auto;
@@ -1159,7 +1157,23 @@ header.page-header, footer.page-footer, section.page-section--intro, section.pag
   }
 }
 
-/* line 107, ../../.source/source/sass/components/_buttons.scss */
+/* line 106, ../../.source/source/sass/components/_buttons.scss */
+.btn--submit {
+  width: 156px;
+}
+@media only screen and (min-width: 960px) {
+  /* line 106, ../../.source/source/sass/components/_buttons.scss */
+  .btn--submit {
+    width: 230px;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  /* line 106, ../../.source/source/sass/components/_buttons.scss */
+  .btn--submit {
+    width: 310px;
+  }
+}
+/* line 118, ../../.source/source/sass/components/_buttons.scss */
 .btn--submit:hover {
   border-color: #dd5a4e;
   color: #dd5a4e;
@@ -1422,16 +1436,54 @@ h2.heading--centered {
 }
 
 /* line 26, ../../.source/source/sass/components/_icons.scss */
+.icon--next-page {
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: top left;
+  background-color: transparent;
+  background-image: url("../img/icons/icon-chevron.svg");
+  background-size: 100%;
+  bottom: 30px;
+  height: 16px;
+  left: calc(50% - 8px);
+  position: absolute;
+  width: 25px;
+  -moz-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  -webkit-transform: translate(0, 0);
+  transform: translate(0, 0);
+  -moz-transition: -moz-transform 0.16s ease-in-out;
+  -o-transition: -o-transform 0.16s ease-in-out;
+  -webkit-transition: -webkit-transform 0.16s ease-in-out;
+  transition: transform 0.16s ease-in-out;
+}
+/* line 39, ../../.source/source/sass/components/_icons.scss */
+.icon--next-page:hover {
+  -moz-transform: translate(0, 3px);
+  -ms-transform: translate(0, 3px);
+  -webkit-transform: translate(0, 3px);
+  transform: translate(0, 3px);
+}
+@media only screen and (min-width: 960px) {
+  /* line 26, ../../.source/source/sass/components/_icons.scss */
+  .icon--next-page {
+    height: 28px;
+    left: calc(50% - 21px);
+    width: 43px;
+  }
+}
+
+/* line 50, ../../.source/source/sass/components/_icons.scss */
 .icon--facebook {
   background-image: url("../img/icons/icon-facebook.svg");
 }
 
-/* line 30, ../../.source/source/sass/components/_icons.scss */
+/* line 54, ../../.source/source/sass/components/_icons.scss */
 .icon--instagram {
   background-image: url("../img/icons/icon-instagram.svg");
 }
 
-/* line 34, ../../.source/source/sass/components/_icons.scss */
+/* line 58, ../../.source/source/sass/components/_icons.scss */
 .icon--twitter {
   background-image: url("../img/icons/icon-twitter.svg");
   margin-right: 0;
@@ -2203,7 +2255,7 @@ nav.page-nav a:after {
   transition: width 0.12s ease-in-out;
 }
 /* line 60, ../../.source/source/sass/layout/_navigation.scss */
-nav.page-nav a.is-active:after, nav.page-nav a:hover:after {
+nav.page-nav a.is-active:after {
   width: 100%;
 }
 @media only screen and (min-width: 960px) {
@@ -2219,23 +2271,23 @@ nav.page-nav a.is-active:after, nav.page-nav a:hover:after {
     top: 30px;
     width: auto;
   }
-  /* line 77, ../../.source/source/sass/layout/_navigation.scss */
+  /* line 76, ../../.source/source/sass/layout/_navigation.scss */
   nav.page-nav ul {
     margin-top: 0;
   }
-  /* line 81, ../../.source/source/sass/layout/_navigation.scss */
+  /* line 80, ../../.source/source/sass/layout/_navigation.scss */
   nav.page-nav li {
     display: inline-block;
   }
-  /* line 83, ../../.source/source/sass/layout/_navigation.scss */
+  /* line 82, ../../.source/source/sass/layout/_navigation.scss */
   nav.page-nav li:not(:last-of-type) {
     margin-right: 30px;
   }
-  /* line 88, ../../.source/source/sass/layout/_navigation.scss */
+  /* line 87, ../../.source/source/sass/layout/_navigation.scss */
   nav.page-nav a {
     padding: 0;
   }
-  /* line 90, ../../.source/source/sass/layout/_navigation.scss */
+  /* line 89, ../../.source/source/sass/layout/_navigation.scss */
   nav.page-nav a:after {
     display: none;
   }
