@@ -103,7 +103,7 @@ var Validate = (function() {
 
 	var _showErrors = function() {
 		$(selectors.error).show();
-		$(selectors.body).scrollTo(0,400);
+		$(selectors.body).scrollTo($(selectors.error),400);
 	};
 	
 	var _clearErrors = function() {

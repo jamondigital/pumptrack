@@ -1686,9 +1686,11 @@ textarea {
 }
 
 /* line 41, ../../.source/source/sass/components/form/_fields.scss */
-textarea:-webkit-autofill,
-input:-webkit-autofill,
-select:-webkit-autofill {
+:-webkit-autofill,
+:-webkit-autofill:hover,
+:-webkit-autofill:focus {
+  transition: background-color 5000s ease-in-out 0s;
+  -webkit-text-fill-color: #ffffff !important;
   -webkit-box-shadow: 0 0 0px 1000px #1D2C33 inset;
 }
 
@@ -1696,7 +1698,7 @@ select:-webkit-autofill {
  * Select
  * -----------------------------------------------------------------------------
  */
-/* line 52, ../../.source/source/sass/components/form/_fields.scss */
+/* line 54, ../../.source/source/sass/components/form/_fields.scss */
 button,
 input[type=submit] {
   background-color: transparent;
@@ -1710,7 +1712,7 @@ input[type=submit] {
  * Select
  * -----------------------------------------------------------------------------
  */
-/* line 66, ../../.source/source/sass/components/form/_fields.scss */
+/* line 68, ../../.source/source/sass/components/form/_fields.scss */
 .dropdown {
   background-color: transparent;
   background-image: url("../img/icons/icon-chevron.svg");
@@ -1729,14 +1731,14 @@ input[type=submit] {
   width: 100%;
 }
 @media only screen and (min-width: 960px) {
-  /* line 66, ../../.source/source/sass/components/form/_fields.scss */
+  /* line 68, ../../.source/source/sass/components/form/_fields.scss */
   .dropdown {
     border-bottom: 5px solid #ffffff;
     height: 50px;
   }
 }
 
-/* line 86, ../../.source/source/sass/components/form/_fields.scss */
+/* line 88, ../../.source/source/sass/components/form/_fields.scss */
 .dropdown select {
   border: none;
   box-shadow: none;
@@ -1751,13 +1753,13 @@ input[type=submit] {
   appearance: none;
 }
 @media only screen and (min-width: 960px) {
-  /* line 86, ../../.source/source/sass/components/form/_fields.scss */
+  /* line 88, ../../.source/source/sass/components/form/_fields.scss */
   .dropdown select {
     margin-top: 5px;
   }
 }
 
-/* line 104, ../../.source/source/sass/components/form/_fields.scss */
+/* line 106, ../../.source/source/sass/components/form/_fields.scss */
 .dropdown select:focus {
   outline: none;
 }
@@ -1766,7 +1768,7 @@ input[type=submit] {
  * Radio, Checkbox
  * -----------------------------------------------------------------------------
  */
-/* line 113, ../../.source/source/sass/components/form/_fields.scss */
+/* line 115, ../../.source/source/sass/components/form/_fields.scss */
 .checkbox,
 .radio {
   border: 2px solid #ffffff;
@@ -1775,7 +1777,7 @@ input[type=submit] {
   position: relative;
   width: 20px;
 }
-/* line 121, ../../.source/source/sass/components/form/_fields.scss */
+/* line 123, ../../.source/source/sass/components/form/_fields.scss */
 .checkbox + label,
 .radio + label {
   display: inline-block;
@@ -1785,12 +1787,12 @@ input[type=submit] {
   width: calc(100% - 35px);
 }
 
-/* line 130, ../../.source/source/sass/components/form/_fields.scss */
+/* line 132, ../../.source/source/sass/components/form/_fields.scss */
 .radio {
   border-radius: 50%;
 }
 
-/* line 134, ../../.source/source/sass/components/form/_fields.scss */
+/* line 136, ../../.source/source/sass/components/form/_fields.scss */
 .checkbox + label {
   font-family: 'GalanoClassicMedium', sans-serif;
   font-weight: 400;
@@ -1798,7 +1800,7 @@ input[type=submit] {
   font-stretch: normal;
 }
 
-/* line 138, ../../.source/source/sass/components/form/_fields.scss */
+/* line 140, ../../.source/source/sass/components/form/_fields.scss */
 input[type=radio],
 input[type=checkbox] {
   height: 20px;
@@ -1809,13 +1811,13 @@ input[type=checkbox] {
   width: 20px;
   z-index: 1;
 }
-/* line 147, ../../.source/source/sass/components/form/_fields.scss */
+/* line 149, ../../.source/source/sass/components/form/_fields.scss */
 input[type=radio]:hover,
 input[type=checkbox]:hover {
   cursor: pointer;
 }
 
-/* line 152, ../../.source/source/sass/components/form/_fields.scss */
+/* line 154, ../../.source/source/sass/components/form/_fields.scss */
 input[type=radio] + .radio,
 input[type=checkbox] + .checkbox {
   background-color: transparent;
@@ -1825,7 +1827,7 @@ input[type=checkbox] + .checkbox {
   transition: background-color 0.24s ease-out;
 }
 
-/* line 158, ../../.source/source/sass/components/form/_fields.scss */
+/* line 160, ../../.source/source/sass/components/form/_fields.scss */
 input[type=radio]:checked + .radio,
 input[type=checkbox]:checked + .checkbox {
   background-color: #ffffff;
