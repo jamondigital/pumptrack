@@ -1794,11 +1794,12 @@ input[type=submit] {
 .dropdown select {
   border: none;
   box-shadow: none;
-  background-color: transparent;
+  background-color: #1D2C33;
   background-image: none;
   padding: 5px 0;
   position: relative;
-  width: 100%;
+  width: 90%;
+  width: calc(100% - 25px);
   z-index: 1;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -1811,7 +1812,7 @@ input[type=submit] {
   }
 }
 
-/* line 106, ../../.source/source/sass/components/form/_fields.scss */
+/* line 107, ../../.source/source/sass/components/form/_fields.scss */
 .dropdown select:focus {
   outline: none;
 }
@@ -1820,7 +1821,7 @@ input[type=submit] {
  * Radio, Checkbox
  * -----------------------------------------------------------------------------
  */
-/* line 115, ../../.source/source/sass/components/form/_fields.scss */
+/* line 116, ../../.source/source/sass/components/form/_fields.scss */
 .checkbox,
 .radio {
   border: 2px solid #ffffff;
@@ -1829,7 +1830,7 @@ input[type=submit] {
   position: relative;
   width: 20px;
 }
-/* line 123, ../../.source/source/sass/components/form/_fields.scss */
+/* line 124, ../../.source/source/sass/components/form/_fields.scss */
 .checkbox + label,
 .radio + label {
   display: inline-block;
@@ -1839,12 +1840,12 @@ input[type=submit] {
   width: calc(100% - 35px);
 }
 
-/* line 132, ../../.source/source/sass/components/form/_fields.scss */
+/* line 133, ../../.source/source/sass/components/form/_fields.scss */
 .radio {
   border-radius: 50%;
 }
 
-/* line 136, ../../.source/source/sass/components/form/_fields.scss */
+/* line 137, ../../.source/source/sass/components/form/_fields.scss */
 .checkbox + label {
   font-family: 'GalanoClassicMedium', sans-serif;
   font-weight: 400;
@@ -1852,7 +1853,7 @@ input[type=submit] {
   font-stretch: normal;
 }
 
-/* line 140, ../../.source/source/sass/components/form/_fields.scss */
+/* line 141, ../../.source/source/sass/components/form/_fields.scss */
 input[type=radio],
 input[type=checkbox] {
   height: 20px;
@@ -1863,13 +1864,13 @@ input[type=checkbox] {
   width: 20px;
   z-index: 1;
 }
-/* line 149, ../../.source/source/sass/components/form/_fields.scss */
+/* line 150, ../../.source/source/sass/components/form/_fields.scss */
 input[type=radio]:hover,
 input[type=checkbox]:hover {
   cursor: pointer;
 }
 
-/* line 154, ../../.source/source/sass/components/form/_fields.scss */
+/* line 155, ../../.source/source/sass/components/form/_fields.scss */
 input[type=radio] + .radio,
 input[type=checkbox] + .checkbox {
   background-color: transparent;
@@ -1879,7 +1880,7 @@ input[type=checkbox] + .checkbox {
   transition: background-color 0.24s ease-out;
 }
 
-/* line 160, ../../.source/source/sass/components/form/_fields.scss */
+/* line 161, ../../.source/source/sass/components/form/_fields.scss */
 input[type=radio]:checked + .radio,
 input[type=checkbox]:checked + .checkbox {
   background-color: #ffffff;
@@ -2365,7 +2366,14 @@ footer.page-footer a {
 footer.page-footer a:hover {
   text-decoration: underline;
 }
-/* line 42, ../../.source/source/sass/layout/_footer.scss */
+/* line 41, ../../.source/source/sass/layout/_footer.scss */
+footer.page-footer a[href*="mailto"] {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+/* line 49, ../../.source/source/sass/layout/_footer.scss */
 footer.page-footer .social-media span {
   display: block;
   font-size: 16px;
@@ -2373,20 +2381,20 @@ footer.page-footer .social-media span {
   margin-bottom: 15px;
 }
 @media screen and (min-width: 960px) {
-  /* line 42, ../../.source/source/sass/layout/_footer.scss */
+  /* line 49, ../../.source/source/sass/layout/_footer.scss */
   footer.page-footer .social-media span {
     font-size: 16px;
     line-height: 1;
   }
 }
 @media screen and (min-width: 1400px) {
-  /* line 42, ../../.source/source/sass/layout/_footer.scss */
+  /* line 49, ../../.source/source/sass/layout/_footer.scss */
   footer.page-footer .social-media span {
     font-size: 16px;
     line-height: 1;
   }
 }
-/* line 49, ../../.source/source/sass/layout/_footer.scss */
+/* line 56, ../../.source/source/sass/layout/_footer.scss */
 footer.page-footer .page-footer__item:not(:last-of-type) {
   margin-bottom: 40px;
 }

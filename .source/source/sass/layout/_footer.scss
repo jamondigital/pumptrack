@@ -38,6 +38,13 @@ footer.page-footer {
 		}
 	}
 	
+	a[href*="mailto"] {
+		display: block;
+		overflow: hidden;
+		text-overflow: ellipsis;		
+		white-space: nowrap;
+	}
+	
 	.social-media {
 		span {
 			display: block;
