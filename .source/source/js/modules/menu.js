@@ -15,7 +15,7 @@ var MenuUi = (function() {
 		btnMenu: 	'.js-btn-menu',
 		
 	};
-	
+
 	// classes
 	var classes = {
 		open: 'is-open',

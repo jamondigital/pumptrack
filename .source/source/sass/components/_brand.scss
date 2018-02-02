@@ -9,7 +9,7 @@
 
 .brand--rbptwc {
 	height: auto;
-	margin-top: get($gutter, '2');
+	margin-top: get($gutter, '7');
 	position: relative;
 	width: 140px;
 	@include transition(transform .1s ease-out);
@@ -20,13 +20,34 @@
 	}
 	
 	@include bp-large() {
-		width: 460px;
+		width: 320px;
 		margin-top: get($gutter, '4') + get($gutter, 'half');
 	}
 	
 	&.brand--rbptwc-small {
-		margin: 0 !important;
+		margin-top: get($gutter, '7');
 		max-width: 336px;
+		
+		@include bp-medium() {
+			margin-top: get($gutter, '2');
+		}
+
+		@include bp-large() {
+			margin-top: get($gutter, '7');
+		}
+	}
+	
+	&.brand--rbptwc-footer {
+		margin-top: 0 !important;
+		width: 200px;
+
+		@include bp-medium() {
+			width: 180px;
+		}
+
+		@include bp-medium() {
+			width: 200px;
+		}
 	}	
 }
 

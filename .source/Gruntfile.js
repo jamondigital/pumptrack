@@ -65,7 +65,7 @@ module.exports = function(grunt) {
 		    },
 			css: {
 			    files: ['<%= pkg.sourceDir %>/sass/**/*.scss'],
-			    tasks: ['compass:dev']
+			    tasks: ['compass:dist']
 			},
 			svgo: {
 			    files: ['<%= pkg.sourceDir %>/img/**/*.svg'],

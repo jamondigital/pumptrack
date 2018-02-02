@@ -59,3 +59,12 @@
 	background-image: url($url-icons + 'icon-twitter.svg');
 	margin-right: 0;
 }
+
+.icon--external-link {
+	@include background-default();
+    background-image: url($url-icons + 'icon-externallink.svg');
+    background-size: 18px;
+    background-position: center right;
+	display: inline-block;
+	padding-right: 26px;
+}

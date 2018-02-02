@@ -36,14 +36,14 @@ section.page-section--intro {
 	}
 	
 	.header-intro {
-		margin-top: 70px;
+		margin-top: 30px;
 		
 		@include bp-medium() {
 			margin-top: 45px;
 		}
 
 		@include bp-large() {
-			margin-top: 55px;
+			margin-top: 35px;
 		}
 	}
 	
