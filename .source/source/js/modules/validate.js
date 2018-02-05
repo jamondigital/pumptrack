@@ -9,17 +9,20 @@ var Validate = (function() {
     
     // selectors 	
 	var selectors = {
-		body:  'body', 
-		form:  '.js-validate',
-		elem:  '[data-rules]',
-		error: '.js-validation-error',
+		body:  		'body', 
+		form:  		'.js-validate',
+		elem:  		'[data-rules]',
+		error: 		'.js-validation-error',
+		btnSubmit: 	'.js-btn-submit',
 	};
 	
 	// css classes
 	var classes = {
-		hasError: 'has-error'
+		hasError: 'has-error',
+		loading:  'is-loading',	
+
 	};
-	
+
 	// container for errors
 	var validation_errors = [];
 	
@@ -32,9 +35,8 @@ var Validate = (function() {
 		email: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
 		protocol: /^(f|ht)tps?:\/\//i,
 		url: /^([a-z][a-z0-9\*\-\.]*):\/\/(?:(?:(?:[\w\.\-\+!$&'\(\)*\+,;=]|%[0-9a-f]{2})+:)*(?:[\w\.\-\+%!$&'\(\)*\+,;=]|%[0-9a-f]{2})+@)?(?:(?:[a-z0-9\-\.]|%[0-9a-f]{2})+|(?:\[(?:[0-9a-f]{0,4}:)*(?:[0-9a-f]{0,4})\]))(?::[0-9]+)?(?:[\/|\?](?:[\w#!:\.\?\+=&@!$'~*,;\/\(\)\[\]\-]|%[0-9a-f]{2})*)?$/,
-		date: /^\d{1,2}\.\d{1,2}\.\d{4}$/
+		date: /^(?:(?:31(\/|-|\.)(?:0?[13578]|1[02]))\1|(?:(?:29|30)(\/|-|\.)(?:0?[1,3-9]|1[0-2])\2))(?:(?:1[6-9]|[2-9]\d)?\d{2})$|^(?:29(\/|-|\.)0?2\3(?:(?:(?:1[6-9]|[2-9]\d)?(?:0[48]|[2468][048]|[13579][26])|(?:(?:16|[2468][048]|[3579][26])00))))$|^(?:0?[1-9]|1\d|2[0-8])(\/|-|\.)(?:(?:0?[1-9])|(?:1[0-2]))\4(?:(?:1[6-9]|[2-9]\d)?\d{2})$/
 	};
-
 
     /* --------------------------------------------------------------
      * METHODS
@@ -49,8 +51,13 @@ var Validate = (function() {
 		
 		// validate on submit
 		$(selectors.body).on('submit', selectors.form, function(e){
+			
+			$(selectors.btnSubmit).addClass(classes.loading);
+			$(selectors.btnSubmit).attr('disabled','disabled');
 			if (_validate($(this)) !== true) {
 				e.preventDefault();
+				$(selectors.btnSubmit).removeClass(classes.loading);
+				$(selectors.btnSubmit).removeAttr('disabled');
 				_showErrors();
 			}
 		});
@@ -60,6 +67,8 @@ var Validate = (function() {
 			$(this).removeClass(classes.hasError);
 			$(this).prev('span.form-error').remove();
 			$(this).next('span.form-error').remove();
+			$(selectors.btnSubmit).removeClass(classes.loading);
+			$(selectors.btnSubmit).removeAttr('disabled');
 		});
 	};
 	

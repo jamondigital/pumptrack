@@ -104,15 +104,32 @@
 }
 
 .btn--submit {
-	
-	width: 156px;
+	width: 175px;
 	
 	@include bp-medium() {
-		width: 230px;
+		width: 240px;
 	}
 
 	@include bp-large() {
-		width: 310px;
+		width: 340px;
+	}
+	
+	&.is-loading {
+		@include background-default();
+		background-image: url($url-icons + 'icon-loader.svg');
+		background-size: 20px auto;
+		background-position: center left 5px;
+		border-color: $color--orange;
+		color: $color--orange;
+		
+		@include bp-medium() {
+			background-position: center left 8px;	
+		}
+	
+		@include bp-large() {
+			background-size: 30px auto;
+			background-position: center left 12px;	
+		}
 	}
 	
 	&:hover {

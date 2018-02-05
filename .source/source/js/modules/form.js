@@ -6,7 +6,7 @@ var FormUi = (function() {
 	};
 	
 	var classes = {
-		floating: 'is-floating',	
+		floating: 'is-floating'
 	};
 
 	var _initialize = function() {
