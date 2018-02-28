@@ -96,5 +96,36 @@ nav.page-nav {
 		right: 65px;
 		top: 45px;
 	}
-	
 }
+
+nav.nav-policy {
+	margin-top: get($gutter, '3');
+	
+	li {
+		display: block;
+		margin-bottom: 4px;
+	}
+	
+	a {
+		color: $color--orange !important;
+		@include font-regular();
+		padding: 8px 0;
+		text-decoration: none;
+		&:hover {
+			text-decoration: underline;
+		}	
+	}
+	
+	@include bp-medium() {
+		
+		li {
+			display: inline-block;
+			margin-right: get($gutter, '3');
+		}
+		
+		a {
+			padding: 0;
+		}
+	}
+}
+

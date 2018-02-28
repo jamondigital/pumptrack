@@ -14,6 +14,8 @@ var Validate = (function() {
 		elem:  		'[data-rules]',
 		error: 		'.js-validation-error',
 		btnSubmit: 	'.js-btn-submit',
+		elemGender: '[name="gender"]',
+		elemRaces:  '[name="race"]',
 	};
 	
 	// css classes
@@ -48,6 +50,12 @@ var Validate = (function() {
 	};
 	
 	var _bind = function() {
+		
+		_updateRaces('female'); // change to male for production
+		
+		$(selectors.elemGender).on('change', function() {
+			_updateRaces($(this).val());
+		});
 		
 		// validate on submit
 		$(selectors.body).on('submit', selectors.form, function(e){
@@ -119,6 +127,45 @@ var Validate = (function() {
 		$('.' + classes.hasError).next('span').remove();
 		$('.' + classes.hasError).removeClass(classes.hasError);
 	};
+	
+	var _updateRaces = function(gender) {
+		
+		// reset dropdown
+		$(selectors.elemRaces).find('option:first').attr('selected', 'selected');
+		$(selectors.elemRaces).val($(selectors.elemRaces).find('option:first').val());
+		
+		if (gender == 'male') {
+			var races_full = races_full_male;
+		}
+		else if (gender == 'female') {
+			var races_full = races_full_female;
+		}
+		
+		// remove unavailable options
+		if (races_full.length > 0) {
+			
+			var suffix = ' (Event full)';
+			
+			$.each(races_full, function(k,v){
+				$(selectors.elemRaces).find('option[value="'+v+'"]').attr('disabled', 'disabled');
+				$(selectors.elemRaces).find('option[value="'+v+'"]').html($(selectors.elemRaces).find('option[value="'+v+'"]').val() + suffix)
+			});
+			
+			// enabled females
+			if (gender == 'male') {
+				$.each(races_full_female, function(k,v){
+					$(selectors.elemRaces).find('option[value="'+v+'"]').removeAttr('disabled');
+					$(selectors.elemRaces).find('option[value="'+v+'"]').html($(selectors.elemRaces).find('option[value="'+v+'"]').val())
+				});				
+			}
+			else if (gender == 'female') {
+				$.each(races_full_male, function(k,v){
+					$(selectors.elemRaces).find('option[value="'+v+'"]').removeAttr('disabled');
+					$(selectors.elemRaces).find('option[value="'+v+'"]').html($(selectors.elemRaces).find('option[value="'+v+'"]').val())
+				});					
+			}
+		}
+	};
 
     /* --------------------------------------------------------------
      * VALIDATION METHODS
@@ -131,7 +178,8 @@ var Validate = (function() {
 	
 	var _valid_email = function(el) {
 		_required(el);
-		if (regex.email.test(el.val())) {
+		var email = $.trim(el.val());
+		if (regex.email.test(email)) {
 			return true;
 		}		
 		return false;	
